@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Authors details</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+
+{% load static %}
+<body>
+
+   <center>
+
+ {% if not  result   %}
+<center>	<font style="color:red;"> <h1> Sorry we could not find the Author you are looking for </h1> </font>
+  
+
+   {%  else %}
+   		<center>
+	  <h4> Following are the Author/s found for your search </h4>
+                 
+          
+          
+     		 {% for value in result  %} 
+    	<center>
+	<font style="color:green;"> <h3> {{ value }} </h3> </font>
+       
+       {% endfor %}
+    
+   {% endif %}		 
+    
+
+         
+
+</body>
+</html>
